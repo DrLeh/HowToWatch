@@ -50,9 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HowToWatch.cs" />
-    <Compile Include="Models\JustWatchResponse.cs" />
-    <Compile Include="Parser.cs" />
+    <Compile Include="WatchUtility.cs" />
+    <Compile Include="JustWatchResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

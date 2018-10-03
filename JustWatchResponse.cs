@@ -5,6 +5,7 @@ using System.Globalization;
 
 namespace HowToWatch.JustWatch
 {
+    //quicktype.io
     public class JustWatchResponse
     {
         [JsonProperty("page")]
@@ -20,10 +21,10 @@ namespace HowToWatch.JustWatch
         public long TotalResults { get; set; }
 
         [JsonProperty("items")]
-        public Item[] Items { get; set; }
+        public JustWatchItem[] Items { get; set; }
     }
 
-    public class Item
+    public class JustWatchItem
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -35,7 +36,7 @@ namespace HowToWatch.JustWatch
         public string FullPath { get; set; }
 
         [JsonProperty("full_paths")]
-        public FullPaths FullPaths { get; set; }
+        public JustWatchFullPaths FullPaths { get; set; }
 
         [JsonProperty("poster")]
         public string Poster { get; set; }
@@ -56,10 +57,10 @@ namespace HowToWatch.JustWatch
         public string OriginalTitle { get; set; }
 
         [JsonProperty("offers")]
-        public Offer[] Offers { get; set; }
+        public JustWatchOffer[] Offers { get; set; }
 
         [JsonProperty("scoring")]
-        public Scoring[] Scoring { get; set; }
+        public JustWatchScoring[] Scoring { get; set; }
 
         //[JsonProperty("original_language")]
         //public Language OriginalLanguage { get; set; }
@@ -74,7 +75,7 @@ namespace HowToWatch.JustWatch
         public long? MaxSeasonNumber { get; set; }
     }
 
-    public class FullPaths
+    public class JustWatchFullPaths
     {
         [JsonProperty("MOVIE_DETAIL_OVERVIEW", NullValueHandling = NullValueHandling.Ignore)]
         public string MovieDetailOverview { get; set; }
@@ -83,7 +84,7 @@ namespace HowToWatch.JustWatch
         public string ShowDetailOverview { get; set; }
     }
 
-    public class Offer
+    public class JustWatchOffer
     {
         [JsonProperty("monetization_type")]
         public string MonetizationType { get; set; }
@@ -98,7 +99,7 @@ namespace HowToWatch.JustWatch
         //public Currency? Currency { get; set; }
 
         [JsonProperty("urls")]
-        public Urls Urls { get; set; }
+        public JustWatchUrls Urls { get; set; }
 
         //[JsonProperty("subtitle_languages")]
         //public Language[] SubtitleLanguages { get; set; }
@@ -143,7 +144,7 @@ namespace HowToWatch.JustWatch
         public long? NewElementCount { get; set; }
     }
 
-    public class Urls
+    public class JustWatchUrls
     {
         [JsonProperty("standard_web")]
         public Uri StandardWeb { get; set; }
@@ -152,7 +153,7 @@ namespace HowToWatch.JustWatch
         public string DeeplinkIos { get; set; }
     }
 
-    public class Scoring
+    public class JustWatchScoring
     {
         [JsonProperty("provider_type")]
         public string ProviderType { get; set; }
@@ -161,7 +162,7 @@ namespace HowToWatch.JustWatch
         public double Value { get; set; }
     }
 
-    internal static class Converter
+    internal static class JustWatchConverter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {

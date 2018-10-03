@@ -7,3 +7,11 @@ C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Debug\HowToWatch.csproj
 C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Debug\HowToWatch.csproj.CopyComplete
 C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Debug\HowToWatch.dll
 C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Debug\HowToWatch.pdb
+C:\Users\dlehman\source\Workspaces\HowToWatch\bin\Debug\HowToWatch.dll
+C:\Users\dlehman\source\Workspaces\HowToWatch\bin\Debug\HowToWatch.pdb
+C:\Users\dlehman\source\Workspaces\HowToWatch\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dlehman\source\Workspaces\HowToWatch\obj\Debug\HowToWatch.csprojAssemblyReference.cache
+C:\Users\dlehman\source\Workspaces\HowToWatch\obj\Debug\HowToWatch.csproj.CoreCompileInputs.cache
+C:\Users\dlehman\source\Workspaces\HowToWatch\obj\Debug\HowToWatch.csproj.CopyComplete
+C:\Users\dlehman\source\Workspaces\HowToWatch\obj\Debug\HowToWatch.dll
+C:\Users\dlehman\source\Workspaces\HowToWatch\obj\Debug\HowToWatch.pdb
