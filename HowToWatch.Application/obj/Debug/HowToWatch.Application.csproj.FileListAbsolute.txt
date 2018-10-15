@@ -11,3 +11,5 @@ C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\Newtonsoft.Json.xml
 C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.csproj.CopyComplete
 C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.dll
 C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.pdb
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\System.ValueTuple.dll
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\System.ValueTuple.xml

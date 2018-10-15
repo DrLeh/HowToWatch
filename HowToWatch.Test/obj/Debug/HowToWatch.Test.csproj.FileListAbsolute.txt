@@ -24,3 +24,7 @@ C:\Projects\HowToWatch\HowToWatch.Test\obj\Debug\UnitTestProject1.dll
 C:\Projects\HowToWatch\HowToWatch.Test\obj\Debug\UnitTestProject1.pdb
 C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\HowToWatch.Application.dll
 C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\HowToWatch.Application.pdb
+C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\HowToWatch.JustWatch.dll
+C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\HowToWatch.JustWatch.pdb
+C:\Projects\HowToWatch\HowToWatch.Test\bin\Debug\Newtonsoft.Json.xml

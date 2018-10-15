@@ -40,11 +40,6 @@ namespace HowToWatch.Models
         public string ShowDetailOverview { get; set; }
     }
 
-    public class MonetizationType
-    {
-        public const string FlatRate = "flatrate";
-    }
-
     public class Offer
     {
         public string MonetizationType { get; set; }
