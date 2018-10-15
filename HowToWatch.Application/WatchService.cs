@@ -100,13 +100,10 @@ namespace HowToWatch.Application
                 .ToList()
                 ;
 
-
             var preferredServices = services
                 .Where(x => x.Preference > 0)
                 .ToList();
-            //filter out avoided
-            //var list = flatrate.ToList();
-            //add preferred, then add zero entries
+
             var serviceList = preferredServices
                 .OrderBy(x => x.Preference)
                 .Where(x => x.Service.Urls.Any(y => flatrate.Contains(y.Url)))
