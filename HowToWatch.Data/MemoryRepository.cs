@@ -30,10 +30,30 @@ namespace HowToWatch.Data
             {
                 new UserServicePreference
                 {
+                    Preference = 1,
                     UserId = u1.Id,
                     User = u1,
                     MonetizationTypeId = flatrate.Id,
-                    MonetizationType = flatrate
+                    MonetizationType = flatrate,
+                    Service = netflix,
+                },
+                new UserServicePreference
+                {
+                    Preference = 2,
+                    UserId = u1.Id,
+                    User = u1,
+                    MonetizationTypeId = flatrate.Id,
+                    MonetizationType = flatrate,
+                    Service = hulu,
+                },
+                new UserServicePreference
+                {
+                    Preference = 3,
+                    UserId = u1.Id,
+                    User = u1,
+                    MonetizationTypeId = flatrate.Id,
+                    MonetizationType = flatrate,
+                    Service = amazon,
                 },
             };
         }

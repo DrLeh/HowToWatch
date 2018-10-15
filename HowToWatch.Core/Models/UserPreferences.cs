@@ -75,10 +75,8 @@ namespace HowToWatch.Models
                     Name = "Amazon",
                     Urls =
                     {
-                        new ServiceUrl
-                        {
-                            Url = "amazon"
-                        }
+                        new ServiceUrl { Url = "amazon" },
+                        new ServiceUrl { Url = "amazon.com" },
                     }
                 };
             }

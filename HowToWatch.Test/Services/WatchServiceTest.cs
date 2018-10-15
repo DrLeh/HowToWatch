@@ -1,18 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using FluentAssertions;
+﻿using FluentAssertions;
 using HowToWatch;
 using HowToWatch.Application;
+using HowToWatch.Core.Data;
+using HowToWatch.Data;
 using HowToWatch.Models;
 using HowToWatch.Services;
 using Moq;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace HowToWatch.Test.Services
 {
     [TestFixture]
     public class WatchServiceTest
     {
+        private StreamingServiceService GetStreamingServiceService()
+        {
+            return new StreamingServiceService(new MemoryRepository());
+        }
+
+        private WatchService GetService(ISourceService sourceService)
+        {
+            return new WatchService(sourceService, new UserService(new MemoryRepository()), new StreamingServiceService(new MemoryRepository()));
+        }
+
         [Test]
         public void Parse_Test()
         {
@@ -40,11 +52,11 @@ namespace HowToWatch.Test.Services
                 }
             });
 
-            var service = new WatchService(sourceService.Object, null);
+            var service = GetService(sourceService.Object);
 
             var result = service.GetHowToWatch(input);
 
-            result.Should().Be("Hot Fuzz can be watched for free on amazon");
+            result.Should().Be("Hot Fuzz can be watched for free on Amazon");
         }
 
         [Test]
@@ -63,7 +75,7 @@ namespace HowToWatch.Test.Services
                         {
                             new Offer
                             {
-                                MonetizationType = MonetizationType.FlatRate,
+                                MonetizationType = "",
                                 Urls = new SourceUrls
                                 {
                                     StandardWeb = "SomeWeirdSite.com"
@@ -74,11 +86,11 @@ namespace HowToWatch.Test.Services
                 }
             });
 
-            var service = new WatchService(sourceService.Object, null);
+            var service = GetService(sourceService.Object);
 
             var result = service.GetHowToWatch(input);
 
-            result.Should().Contain("Hot Fuzz is not available on any flat rate streaming services");
+            result.Should().Contain("Hot Fuzz is not available on any of your flat rate streaming services");
         }
 
         [Test]
@@ -116,11 +128,11 @@ namespace HowToWatch.Test.Services
                 }
             });
 
-            var service = new WatchService(sourceService.Object, null);
+            var service = GetService(sourceService.Object);
 
             var result = service.GetHowToWatch(input);
 
-            result.Should().Be("Hot Fuzz can be watched for free on netflix and amazon");
+            result.Should().Be("Hot Fuzz can be watched for free on Netflix and Amazon");
         }
 
         [Test]
@@ -183,11 +195,11 @@ namespace HowToWatch.Test.Services
                     }
                 });
 
-            var service = new WatchService(sourceService.Object, userService.Object);
+            var service = new WatchService(sourceService.Object, userService.Object, GetStreamingServiceService());
 
             var result = service.GetHowToWatch(input, 1);
 
-            result.Should().Be("Hot Fuzz can be watched for free on netflix");
+            result.Should().Be("Hot Fuzz can be watched for free on Netflix");
         }
 
         [Test]
@@ -269,7 +281,7 @@ namespace HowToWatch.Test.Services
                     },
                 });
 
-            var service = new WatchService(sourceService.Object, userService.Object);
+            var service = new WatchService(sourceService.Object, userService.Object, GetStreamingServiceService());
 
             var result = service.GetHowToWatch(input, 1);
 
@@ -356,7 +368,7 @@ namespace HowToWatch.Test.Services
                     },
                 });
 
-            var service = new WatchService(sourceService.Object, userService.Object);
+            var service = new WatchService(sourceService.Object, userService.Object, GetStreamingServiceService());
 
             var result = service.GetHowToWatch(input, 1);
 

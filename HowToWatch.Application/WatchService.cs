@@ -15,18 +15,19 @@ namespace HowToWatch.Application
     {
         public ISourceService SourceService { get; }
         public IUserService UserService { get; }
+        public IStreamingServiceService StreamingServiceService { get; }
 
-        public WatchService(ISourceService sourceService, IUserService userService)
+        public WatchService(ISourceService sourceService, IUserService userService, IStreamingServiceService streamingServiceService)
         {
             SourceService = sourceService;
             UserService = userService;
+            StreamingServiceService = streamingServiceService;
         }
 
 
         public string GetHowToWatch(string query)
         {
-            var response = SourceService.Query(query);
-            return Parse(query, response);
+            return GetHowToWatch(query, 1);
         }
 
         public string GetHowToWatch(string query, long userId)
@@ -114,8 +115,14 @@ namespace HowToWatch.Application
             var prefServiceUrls = serviceList.SelectMany(z => z.Urls.Select(y => y.Url));
 
             var remainingServices = flatrate.Where(x => !prefServiceUrls.Contains(x));
-            if (remainingServices.Any())
-                serviceNames.AddRange(remainingServices);
+            var remainingServiceNames = remainingServices
+                .OrEmptyIfNull()
+                .Select(StreamingServiceService.GetServiceByUrl)
+                .SelectMany(x => x.Select(y => y.Name))
+                .Distinct()
+                .ToList();
+
+            serviceNames.AddRange(remainingServiceNames);
 
             if (serviceNames.Any())
                 return GetNiceStringForList($"{item.Title} can be watched for free on", serviceNames);

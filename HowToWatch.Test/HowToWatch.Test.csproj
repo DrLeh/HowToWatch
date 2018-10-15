@@ -84,6 +84,10 @@
       <Project>{1C616042-FF1B-40A3-9491-95C49F39FE4D}</Project>
       <Name>HowToWatch.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HowToWatch.Data\HowToWatch.Data.csproj">
+      <Project>{6CE520CF-B25C-4E5A-93CB-3347AE94216A}</Project>
+      <Name>HowToWatch.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HowToWatch.JustWatch\HowToWatch.JustWatch.csproj">
       <Project>{DB48CF90-9D1B-4AAA-872F-7D3557519BC1}</Project>
       <Name>HowToWatch.JustWatch</Name>
