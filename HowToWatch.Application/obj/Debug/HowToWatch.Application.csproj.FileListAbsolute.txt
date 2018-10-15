@@ -1,0 +1,13 @@
+C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.csprojAssemblyReference.cache
+C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.csproj.CoreCompileInputs.cache
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.Application.dll
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.Application.pdb
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.dll
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.JustWatch.dll
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.pdb
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\HowToWatch.JustWatch.pdb
+C:\Projects\HowToWatch\HowToWatch.Application\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.csproj.CopyComplete
+C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.dll
+C:\Projects\HowToWatch\HowToWatch.Application\obj\Debug\HowToWatch.Application.pdb

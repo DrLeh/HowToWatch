@@ -1,8 +1,0 @@
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\bin\Release\HowToWatch.dll
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\bin\Release\HowToWatch.pdb
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\bin\Release\Newtonsoft.Json.dll
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\bin\Release\Newtonsoft.Json.xml
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Release\HowToWatch.csproj.CoreCompileInputs.cache
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Release\HowToWatch.csproj.CopyComplete
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Release\HowToWatch.dll
-C:\Users\dlehman\source\Workspaces\DLBlog\HowToWatch\obj\Release\HowToWatch.pdb
